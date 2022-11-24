@@ -93,3 +93,39 @@ let zero = removeChars.filter(function(el){
     return `${acc}${current}`
 })
 console.log(zero)
+
+// another example 
+let ages = [10,20,30,40,50,60]
+let theBiggestAge = ages.reduce(function(acc,current){
+    return acc > current ? acc :current
+})
+console.log(theBiggestAge)
+//----------------------------------
+
+// forEach
+
+
+
+let allLis = document.querySelectorAll("ul li")
+
+
+allLis.forEach(function(el){
+
+    el.onclick = function(){
+        allLis.forEach(function(el){
+            el.classList.remove("Active")
+        })
+        this.classList.add("Active")
+    }
+})
+
+
+// console.log(allLis)
+// allLis.forEach(function(el){
+//     el.onclick = function(){
+//         allLis.forEach(function(el){
+//             el.classList.remove("active")
+//         })
+//         this.classList.add("active")
+//     }
+// })
