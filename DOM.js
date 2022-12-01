@@ -156,7 +156,7 @@ window.onresize = () => {
 // --------------------------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------------------------
 document.links[0].onclick = (event) => {
-    event.preventDefault(); // cancel what will happen in default
+    event.preventDefault(); // cancel what will happen in default **********
 };
 //* simulate event blur , click , focus
 // --------------------------------------------------------------------------------------------------------------------
@@ -167,3 +167,37 @@ document.links[0].onclick = (event) => {
 // -------------------------------------------------------------------------------------------------------------------
 
 //* ----------------------------class list 94 ---------------------------------------------------------------------------------------
+let pass = document.querySelector("#pass");
+console.log(pass);
+window.onload = function () {
+    btn.click;
+};
+
+btn.style.cssText = `color :red ; border-radius :20px ; border:none`;
+
+//---------------------------------------------
+// before , after , append , prepend , remove
+
+// before :- add the element before the current element
+// after :- add the element after the current element
+// append : add the element inside the current element in the end
+// prepend : add the element inside the current element but in the first
+// remove :remove the element from the body
+
+let par = document.createElement("p");
+let parText = document.createTextNode("this is a paragraph");
+
+par.append(parText); // append
+console.log(par);
+
+document.body.prepend(par); // prepend
+
+btn.before("text before the element"); // before
+par.after("text after the element"); // after
+//----------------------------------------------------------------
+
+//?---------------------------add event listener-------------------------------------
+
+btn.addEventListener("click", function () {
+    console.log("this is from event listener");
+});
